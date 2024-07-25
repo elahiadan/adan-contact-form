@@ -7,7 +7,6 @@ use Illuminate\Support\ServiceProvider;
 
 class FormServiceProvider extends ServiceProvider
 {
-
     public function boot(): void
     {
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
@@ -15,7 +14,7 @@ class FormServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 
         $this->publishes([
-            __DIR__ . '/views' => resource_path('views/vendor/adan'),
+            __DIR__ . '/views' => resource_path('views/adan'),
             __DIR__ . '/config/adan-contact.php' => config_path('adan-contact.php'),
             __DIR__.'/database/migrations' => database_path('migrations')
         ]);
