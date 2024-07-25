@@ -321,14 +321,16 @@
             <p>Planning to visit Indonesia soon? Get insider tips on where to go, things to do and find best deals for
                 your next adventure.</p>
 
-            <form method="post" action="{{route('adan')}}">
+            <form method="post" action="{{route('adan.form.submit')}}">
                 @csrf
                 <label for="name">Full name</label>
-                <input type="text" id="name" name="name" placeholder="Your Full Name" >
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Your Email Address" >
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="Mobile Number" required>
                 <label for="message">Message</label>
-                <textarea rows="6" placeholder="Your Message" id="message" name="message" ></textarea>
+                <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
                 <button type="submit">Submit</button>
 
             </form>

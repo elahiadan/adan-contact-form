@@ -2,32 +2,39 @@
 
 namespace Adan\Http\Controllers;
 
+use Adan\Jobs\ContactJob;
+use Adan\Models\AdanContact;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class FormController extends Controller
 {
-    public $ACTIVE = 1;
-    public $INACTIVE = 0;
-    // public $TODAYDATETIME = date("Y-m-d H:i:s");
-
-    public function __construct()
-    {
-    }
-
     public function index()
     {
         return view('adan::form');
     }
 
     public function store(Request $request){
+        // Validate the form data
+        $request->validate([
+            'name' =>'required|string|max:255',
+            'email' =>'required|string|email',
+            'phone' =>'required|string|max:20',
+           'message' =>'required|string|max:255',
+        ]);
+        
+        // Store the form data in the database
         $data = $request->all();
-        dd($data,$request);
+        $contact = new AdanContact();
+        $contact->name = $data['name'];
+        $contact->email = $data['email'];
+        $contact->phone = $data['phone'];
+        $contact->message = $data['message'];
+        $contact->save();
 
-        // Your database operations here
-        // Example:
-        // $user = User::create($data);
-        // $user->status = $this->ACTIVE;
-        // $user->save();
+        dispatch(new ContactJob($data));
+
+        return redirect()->route('adan.form');
+        
     }
 }
