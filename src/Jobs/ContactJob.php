@@ -2,7 +2,7 @@
 
 namespace Adan\Jobs;
 
-use Adan\Mail\ContactMail;
+use Adan\Contact\Mail\ContactMail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;

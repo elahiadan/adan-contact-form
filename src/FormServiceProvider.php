@@ -13,17 +13,18 @@ class FormServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/views', 'adan');
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
-        
-        $this->publishes([
-            __DIR__ . '/views' => resource_path('views/vendor/adan'),
-            __DIR__ . '/config/adan-contact.php' => config_path('adan-contact.php'),
-            __DIR__.'/database/migrations' => database_path('migrations')
-        ]);
+
+        // $this->publishes([
+        //     __DIR__ . '/views' => resource_path('views/vendor/adan'),
+        //     __DIR__ . '/config/adan-contact.php' => config_path('adan-contact.php'),
+        //     __DIR__.'/database/migrations' => database_path('migrations')
+        // ]);
 
         $this->mergeConfigFrom(
             __DIR__ . '/config/adan-contact.php',
             'adan'
         );
+    
     }
 
     public function register()

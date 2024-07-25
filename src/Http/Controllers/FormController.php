@@ -1,9 +1,9 @@
 <?php
 
-namespace Adan\Http\Controllers;
+namespace Adan\Contact\Http\Controllers;
 
-use Adan\Jobs\ContactJob;
-use Adan\Models\AdanContact;
+use Adan\Contact\Jobs\ContactJob;
+use Adan\Contact\Models\AdanContact;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
