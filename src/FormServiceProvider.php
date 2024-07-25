@@ -24,7 +24,6 @@ class FormServiceProvider extends ServiceProvider
             __DIR__ . '/config/adan-contact.php',
             'adan'
         );
-    
     }
 
     public function register()
