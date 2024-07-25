@@ -1,0 +1,25 @@
+{
+    "name": "adan/contact",
+    "description": "this is the first package",
+    "type": "contact-form",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Adan\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adan"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Adan\\FormServiceProvider"
+            ]
+        }
+    }
+}
