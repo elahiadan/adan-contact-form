@@ -1,6 +1,6 @@
 <?php
 
-namespace Adan;
+namespace Adan\Contact;
 
 use Illuminate\Support\ServiceProvider;
 

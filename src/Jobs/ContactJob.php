@@ -1,14 +1,14 @@
 <?php
 
-namespace Adan\Jobs;
+namespace Adan\Contact\Jobs;
 
 use Adan\Contact\Mail\ContactMail;
 use Illuminate\Bus\Queueable;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Mail;
 
 class ContactJob implements ShouldQueue
 {

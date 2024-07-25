@@ -3,9 +3,9 @@
 namespace Adan\Contact\Http\Controllers;
 
 use Adan\Contact\Jobs\ContactJob;
+use Illuminate\Http\Request;
 use Adan\Contact\Models\AdanContact;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class FormController extends Controller
 {

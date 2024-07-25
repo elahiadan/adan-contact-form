@@ -1,6 +1,6 @@
 <?php
 
-namespace Adan\Mail;
+namespace Adan\Contact\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
